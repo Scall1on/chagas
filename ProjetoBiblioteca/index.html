@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protótipo - Biblioteca</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+    }
+
+    .header {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+
+    .content {
+      background-image: url('biblioteca.jpg');
+      /* Substitua pelo caminho da imagem de fundo */
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      max-width: 800px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-box button {
+      width: 100px;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .btn-funcionario {
+      background-color: #28a745;
+    }
+
+    .btn-aluno {
+      background-color: #ff7f50;
+    }
+
+    .btn-confirm {
+      background-color: #007bff;
+      width: 100%;
+    }
+
+    .footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .footer div {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer p,
+    .footer a {
+      margin: 5px 0;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- header -->
+  <div class="header">
+    <div class="header-left">
+      <img src="./assets/logo.png" alt="Logo">
+      <h1>PROTÓTIPO - BIBLIOTECA</h1>
+    </div>
+    <a href="https://instagram.com/chagasrodriguesoficial" target="_blank">@chagasrodriguesoficial</a>
+  </div>
+
+  <div>
+    <img src="./assets/logoSeducColor.svg" alt="Logo Seduc">
+  </div>
+
+  <!-- menu de login -->
+  <div class="content">
+    <img src="./assets/bg-login.png" alt="">
+    <div class="login-box">
+
+      <button class="btn-funcionario" onclick="window.location.href='login_funcionario.html'">Funcionário</button>
+      <button class="btn-aluno" onclick="window.location.href='login_aluno.html'">Aluno</button>
+      <br>
+      <button class="btn-confirm">Confirmar</button>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div>
+      <img src="./assets/logoSeduc.svg" alt="">
+      <p>SECRETARIA DA EDUCAÇÃO - SEDUC</p>
+      <p>GOVERNO DO PIAUÍ - Todos pelo Piauí, Aqui tem Futuro</p>
+      <p>0800 280 5570 | contato@seduc.pi.gov.br</p>
+      <p>Rua: Paulo Airton G. Pacheco, 435, Bairro: Dirceu Arcoverde, Parnaíba - Piauí. Contato: (86) 9 9450-3910</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
