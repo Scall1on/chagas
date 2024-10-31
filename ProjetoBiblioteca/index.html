@@ -14,7 +14,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       background-color: #f0f0f0;
     }
 
@@ -60,33 +59,45 @@
     }
 
     .middle-header img {
+      width: 25%;
       margin-top: 10px;
       margin-left: 30px;
     }
 
     .content {
-      /* Substitua pelo caminho da imagem de fundo */
       display: flex;
-      height: 500px;
-      max-width: 800px;
+      position: relative;
+      min-height: 400px;
+      width: 100%;
       align-items: center;
       justify-content: center;
+      flex-grow: 1;
+      margin-bottom: 100px;
     }
 
-
-    .content-background {
-      background-image: url('biblioteca.jpg');
-      /* background-size: cover; */
-      /* background-position: center; */
+    .background-content {
+      position: absolute;
+      margin-top: 10px;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
     }
 
-    */ .login-box {
+    .imagem-login {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .login-box {
+      position: relative;
       background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
+      padding: 50px;
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
     }
 
     .login-box button {
@@ -114,16 +125,56 @@
     }
 
     .footer {
-      background-color: #007bff;
+      background-color: #0D6EFD;
       color: white;
-      text-align: center;
       padding: 20px;
       width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
 
     .footer div {
       max-width: 800px;
-      margin: 0 auto;
+      /* margin: 0 auto; */
+    }
+
+    .imagem-footer {
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .imagem-footer img {
+      width: 45%;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .piaui-footer {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      text-align: left;
+      /* Alinha o texto à esquerda */
+    }
+
+    .footer-logo {
+      width: 45%;
+      /* Ajuste conforme necessário */
+      margin-right: 20px;
+      /* Espaço entre a imagem e o texto */
+    }
+
+
+    .info-footer {
+      margin-left: auto;
+      /* Empurra a info-footer para a direita */
+      text-align: right;
+      /* Alinha o texto à direita */
     }
 
     .footer p,
@@ -131,6 +182,26 @@
       margin: 5px 0;
       color: white;
       text-decoration: none;
+    }
+
+    .lower-bar {
+      background-color: #034EA2;
+      width: 100%;
+    }
+
+    .contatos {
+      color: white;
+      font-size: 20px;
+      display: flex;
+    }
+
+    .lower-bar-icon {
+      height: 20px;
+      width: 20px;
+    }
+
+    .redes-sociais {
+      display: flex;
     }
   </style>
 </head>
@@ -154,11 +225,10 @@
 
   <!-- menu de login -->
   <div class="content">
-    <div class="content-background">
-      <img src="./assets/bg-login.png" alt="">
+    <div class="background-content">
+      <img src="./assets/bg-login.png" alt="" class="imagem-login">
     </div>
     <div class="login-box">
-
       <button class="btn-funcionario" onclick="window.location.href='login_funcionario.html'">Funcionário</button>
       <button class="btn-aluno" onclick="window.location.href='login_aluno.html'">Aluno</button>
       <br>
@@ -168,15 +238,32 @@
 
   <!-- footer -->
   <div class="footer">
-    <div>
-      <img src="./assets/logoSeduc.svg" alt="">
-      <p>SECRETARIA DA EDUCAÇÃO - SEDUC</p>
-      <p>GOVERNO DO PIAUÍ - Todos pelo Piauí, Aqui tem Futuro</p>
+    <div class="imagem-footer">
+      <img src="./assets/logoSeduc.svg" alt="" class="footer-logo">
+      <div class="piaui-footer">
+        <p>SECRETARIA DA EDUCAÇÃO - SEDUC</p>
+        <p>GOVERNO DO PIAUÍ - Todos pelo Piauí, Aqui tem Futuro.</p>
+      </div>
+    </div>
+    <div class="info-footer">
       <p>0800 280 5570 | contato@seduc.pi.gov.br</p>
       <p>Rua: Paulo Airton G. Pacheco, 435, Bairro: Dirceu Arcoverde, Parnaíba - Piauí. Contato: (86) 9 9450-3910</p>
     </div>
   </div>
 
+  <div class="lower-bar">
+    <div class="contatos">
+      <img src="./assets/icon_footer_phone 1.svg" alt="" class="lower-bar-icon">
+      <p>0800 280 5570</p>
+      <img src="./assets/icon_footer_mail 1.svg" alt="" class="lower-bar-icon">
+      <p>contato@seduc.com.br</p>
+    </div>
+    <div class="redes-sociais">
+      <img src="./assets/youtube 1.svg" alt="" class="social-icon">
+      <img src="./assets/instagram 1.svg" alt="" class="social-icon">
+      <img src="./assets/facebook 1.svg" alt="" class="social-icon">
+    </div>
+  </div>
 </body>
 
 </html>
