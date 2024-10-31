@@ -35,7 +35,7 @@
     }
 
     .header img {
-      height: 50px;
+      height: 70px;
       margin-right: 10px;
     }
 
@@ -52,20 +52,36 @@
       margin-left: 20px;
     }
 
-    .content {
-      background-image: url('biblioteca.jpg');
-      /* Substitua pelo caminho da imagem de fundo */
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      max-width: 800px;
-      height: 500px;
+    .middle-header {
       display: flex;
+      justify-content: flex-start;
+      padding: 0;
+      width: 100%;
+    }
+
+    .middle-header img {
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+
+    .content {
+      /* Substitua pelo caminho da imagem de fundo */
+      display: flex;
+      height: 500px;
+      max-width: 800px;
       align-items: center;
       justify-content: center;
     }
 
-    .login-box {
+
+    .content-background {
+      background-image: url('biblioteca.jpg');
+      /* background-size: cover; */
+      /* background-position: center; */
+      width: 100%;
+    }
+
+    */ .login-box {
       background-color: rgba(255, 255, 255, 0.9);
       padding: 20px;
       border-radius: 8px;
@@ -125,18 +141,22 @@
   <div class="header">
     <div class="header-left">
       <img src="./assets/logo.png" alt="Logo">
+    </div>
+    <div class="header-text">
       <h1>PROTÓTIPO - BIBLIOTECA</h1>
     </div>
     <a href="https://instagram.com/chagasrodriguesoficial" target="_blank">@chagasrodriguesoficial</a>
   </div>
 
-  <div>
+  <div class="middle-header">
     <img src="./assets/logoSeducColor.svg" alt="Logo Seduc">
   </div>
 
   <!-- menu de login -->
   <div class="content">
-    <img src="./assets/bg-login.png" alt="">
+    <div class="content-background">
+      <img src="./assets/bg-login.png" alt="">
+    </div>
     <div class="login-box">
 
       <button class="btn-funcionario" onclick="window.location.href='login_funcionario.html'">Funcionário</button>
